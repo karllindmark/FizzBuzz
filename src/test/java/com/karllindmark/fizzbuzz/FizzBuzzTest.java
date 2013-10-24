@@ -15,7 +15,12 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_print_buzz_on_division_of_three(){
+    public void should_print_fizz_on_division_of_three(){
         assertEquals("Fizz", fizzBuzz.of(3));
+    }
+    
+    @Test
+	public void should_print_buzz_on_division_of_five(){
+        assertEquals("Buzz", fizzBuzz.of(5));
     }
 }
