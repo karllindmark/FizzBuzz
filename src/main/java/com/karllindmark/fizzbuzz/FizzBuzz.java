@@ -12,14 +12,14 @@ public class FizzBuzz {
         fizzBuzzStrings.put(5, "Buzz");
     }
 
-    public String of(int number) {
+    public String of(final int number) {
         final StringBuilder builder = new StringBuilder(); 
         for( int key : fizzBuzzStrings.keySet() ) {
             if( isModulusOf(number, key) ) {
                 builder.append(fizzBuzzStrings.get(key));
             }
         }
-        return builder.toString(); 
+        return builder.length() == 0? String.valueOf(number) : builder.toString(); 
     }
 
     private boolean isModulusOf(final int number, final int modulus) {
