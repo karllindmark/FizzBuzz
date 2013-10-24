@@ -26,6 +26,6 @@ public class FizzBuzzTest {
 
 	@Test
 	public void should_print_fizz_buzz_on_division_of_three_and_five(){
-		assertEquals("Fizz Buzz", fizzBuzz.of(15));
+		assertEquals("FizzBuzz", fizzBuzz.of(15));
 	}
 }

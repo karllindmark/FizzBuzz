@@ -1,15 +1,29 @@
 package com.karllindmark.fizzbuzz;
 
+import java.util.*;
+
 public class FizzBuzz {
 
-    public String of(int number) {
-        if( number % 3 == 0 ) {
-            return "Fizz";
-        } else if( number % 5 == 0 ) {
-            return "Buzz";
-        } else {
-            return "";
-        }
+    private Map<Integer, String> fizzBuzzStrings;
+
+    public FizzBuzz() {
+        fizzBuzzStrings = new HashMap<Integer, String>();
+        fizzBuzzStrings.put(3, "Fizz");
+        fizzBuzzStrings.put(5, "Buzz");
     }
+
+    public String of(int number) {
+        final StringBuilder builder = new StringBuilder(); 
+        for( int key : fizzBuzzStrings.keySet() ) {
+            if( isModulusOf(number, key) ) {
+                builder.append(fizzBuzzStrings.get(key));
+            }
+        }
+        return builder.toString(); 
+    }
+
+    private boolean isModulusOf(final int number, final int modulus) {
+        return number % modulus == 0;
+    } 
 }
 
