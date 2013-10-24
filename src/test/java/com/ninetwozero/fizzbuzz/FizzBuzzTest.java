@@ -28,6 +28,11 @@ public class FizzBuzzTest {
 	public void should_print_fizz_buzz_on_division_of_three_and_five(){
 		assertEquals("FizzBuzz", fizzBuzz.of(15));
 	}
+
+	@Test
+	public void should_print_woof_on_division_of_seven(){
+		assertEquals("Woof", fizzBuzz.of(14));
+	}
 	
 	@Test
 	public void should_return_the_inputed_number_if_not_modulus(){

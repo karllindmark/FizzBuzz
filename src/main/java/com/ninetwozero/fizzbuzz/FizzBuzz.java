@@ -10,6 +10,7 @@ public class FizzBuzz {
         fizzBuzzStrings = new HashMap<Integer, String>();
         fizzBuzzStrings.put(3, "Fizz");
         fizzBuzzStrings.put(5, "Buzz");
+	fizzBuzzStrings.put(7, "Woof");
     }
 
     public String of(final int number) {
