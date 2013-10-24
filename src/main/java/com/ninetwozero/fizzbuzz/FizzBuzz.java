@@ -1,6 +1,7 @@
 package com.ninetwozero.fizzbuzz;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FizzBuzz {
 
@@ -10,21 +11,21 @@ public class FizzBuzz {
         fizzBuzzStrings = new HashMap<Integer, String>();
         fizzBuzzStrings.put(3, "Fizz");
         fizzBuzzStrings.put(5, "Buzz");
-	fizzBuzzStrings.put(7, "Woof");
+        fizzBuzzStrings.put(7, "Woof");
     }
 
     public String of(final int number) {
-        final StringBuilder builder = new StringBuilder(); 
-        for( int key : fizzBuzzStrings.keySet() ) {
-            if( isModulusOf(number, key) ) {
+        final StringBuilder builder = new StringBuilder();
+        for (int key : fizzBuzzStrings.keySet()) {
+            if (isModulusOf(number, key)) {
                 builder.append(fizzBuzzStrings.get(key));
             }
         }
-        return builder.length() == 0? String.valueOf(number) : builder.toString(); 
+        return builder.length() == 0 ? String.valueOf(number) : builder.toString();
     }
 
     private boolean isModulusOf(final int number, final int modulus) {
         return number % modulus == 0;
-    } 
+    }
 }
 
