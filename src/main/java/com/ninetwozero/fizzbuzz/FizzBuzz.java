@@ -1,4 +1,4 @@
-package com.karllindmark.fizzbuzz;
+package com.ninetwozero.fizzbuzz;
 
 import java.util.*;
 

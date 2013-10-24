@@ -1,4 +1,4 @@
-package com.karllindmark.fizzbuzz;
+package com.ninetwozero.fizzbuzz;
 
 import org.junit.Before;
 import org.junit.Test;
